@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fred Campos - Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <code>&lt;fredcamps/&gt;</code>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="active">Projects</a>
+                <a href="resume.html" class="inactive">Resume</a>
+                <a href="https://github.com/fredcamps" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/fred-p-campos" target="_blank">LinkedIn</a>
+                <a href="mailto:fred.tecnologia@gmail.com">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Fred Campos</h1>
+                <p class="subtitle">Senior Software Engineer - Data Infrastructure</p>
+                <p class="tagline">Building scalable data platforms, observability solutions, and resilient infrastructure for enterprise systems.</p>
+                
+                <div class="hero-actions">
+                    <a href="resume.html" class="btn btn-primary">View Resume</a>
+                    <a href="https://github.com/fredcamps" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <h2 class="section-title">📁 GitHub Projects</h2>
+
+                <div class="project-grid">
+                    <article class="project-card" role="link" tabindex="0" aria-label="Open lsp-jedi on GitHub" onclick="if (!event.target.closest('a')) window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" onkeydown="if (event.target === this && event.key === 'Enter') window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" data-url="https://github.com/fredcamps/lsp-jedi">
+                        <div class="project-header">
+                            <a href="https://github.com/fredcamps/lsp-jedi" class="github-icon" target="_blank" rel="noopener noreferrer" aria-label="lsp-jedi on GitHub">
+                                <svg class="project-icon" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                                    <rect x="3" y="3" width="42" height="42" rx="8" fill="#7F5AB6"/>
+                                    <path d="M14 13h20v4H19v5h13v4H19v5h15v4H14z" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3>lsp-jedi</h3>
+                        <p class="description">A LSP client for Emacs using Python Jedi Language Server</p>
+                        <div class="project-tags"><span class="tag">Emacs Lisp</span></div>
+                    </article>
+
+                    <article class="project-card" role="link" tabindex="0" aria-label="Open vinte-uno on GitHub" onclick="if (!event.target.closest('a')) window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" onkeydown="if (event.target === this && event.key === 'Enter') window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" data-url="https://github.com/fredcamps/vinte-uno">
+                        <div class="project-header">
+                            <a href="https://github.com/fredcamps/vinte-uno" class="github-icon" target="_blank" rel="noopener noreferrer" aria-label="vinte-uno on GitHub">
+                                <svg class="project-icon" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                                    <path d="M24 4h8c6 0 9 3 9 9v8H27v4H12c-5 0-8-3-8-8v-4c0-6 4-9 10-9h10z" fill="#3776AB"/>
+                                    <circle cx="19" cy="12" r="2" fill="#fff"/>
+                                    <path d="M24 44h-8c-6 0-9-3-9-9v-8h14v-4h15c5 0 8 3 8 8v4c0 6-4 9-10 9H24z" fill="#FFD43B"/>
+                                    <circle cx="29" cy="36" r="2" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3>vinte-uno</h3>
+                        <p class="description">A simple blackjack game made in Python3</p>
+                        <div class="project-tags"><span class="tag">Python</span></div>
+                    </article>
+
+                    <article class="project-card" role="link" tabindex="0" aria-label="Open tweetsplit on GitHub" onclick="if (!event.target.closest('a')) window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" onkeydown="if (event.target === this && event.key === 'Enter') window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" data-url="https://github.com/fredcamps/tweetsplit">
+                        <div class="project-header">
+                            <a href="https://github.com/fredcamps/tweetsplit" class="github-icon" target="_blank" rel="noopener noreferrer" aria-label="tweetsplit on GitHub">
+                                <svg class="project-icon" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                                    <path d="M24 4h8c6 0 9 3 9 9v8H27v4H12c-5 0-8-3-8-8v-4c0-6 4-9 10-9h10z" fill="#3776AB"/>
+                                    <circle cx="19" cy="12" r="2" fill="#fff"/>
+                                    <path d="M24 44h-8c-6 0-9-3-9-9v-8h14v-4h15c5 0 8 3 8 8v4c0 6-4 9-10 9H24z" fill="#FFD43B"/>
+                                    <circle cx="29" cy="36" r="2" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3>tweetsplit</h3>
+                        <p class="description">Script for splitting long texts into delimited-length chunks.</p>
+                        <div class="project-tags"><span class="tag">Python</span></div>
+                    </article>
+
+                    <article class="project-card" role="link" tabindex="0" aria-label="Open proto-chat on GitHub" onclick="if (!event.target.closest('a')) window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" onkeydown="if (event.target === this && event.key === 'Enter') window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" data-url="https://github.com/fredcamps/proto-chat">
+                        <div class="project-header">
+                            <a href="https://github.com/fredcamps/proto-chat" class="github-icon" target="_blank" rel="noopener noreferrer" aria-label="proto-chat on GitHub">
+                                <svg class="project-icon" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                                    <path d="M24 4h8c6 0 9 3 9 9v8H27v4H12c-5 0-8-3-8-8v-4c0-6 4-9 10-9h10z" fill="#3776AB"/>
+                                    <circle cx="19" cy="12" r="2" fill="#fff"/>
+                                    <path d="M24 44h-8c-6 0-9-3-9-9v-8h14v-4h15c5 0 8 3 8 8v4c0 6-4 9-10 9H24z" fill="#FFD43B"/>
+                                    <circle cx="29" cy="36" r="2" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3>proto-chat</h3>
+                        <p class="description">Just a dummy chat made in Tornado framework</p>
+                        <div class="project-tags"><span class="tag">Python</span></div>
+                    </article>
+
+                    <article class="project-card" role="link" tabindex="0" aria-label="Open linkedin-crawler on GitHub" onclick="if (!event.target.closest('a')) window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" onkeydown="if (event.target === this && event.key === 'Enter') window.open(this.dataset.url, '_blank', 'noopener,noreferrer')" data-url="https://github.com/fredcamps/linkedin-crawler">
+                        <div class="project-header">
+                            <a href="https://github.com/fredcamps/linkedin-crawler" class="github-icon" target="_blank" rel="noopener noreferrer" aria-label="linkedin-crawler on GitHub">
+                                <svg class="project-icon" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                                    <path d="M24 4h8c6 0 9 3 9 9v8H27v4H12c-5 0-8-3-8-8v-4c0-6 4-9 10-9h10z" fill="#3776AB"/>
+                                    <circle cx="19" cy="12" r="2" fill="#fff"/>
+                                    <path d="M24 44h-8c-6 0-9-3-9-9v-8h14v-4h15c5 0 8 3 8 8v4c0 6-4 9-10 9H24z" fill="#FFD43B"/>
+                                    <circle cx="29" cy="36" r="2" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3>linkedin-crawler</h3>
+                        <p class="description">A simple Linkedin Crawler</p>
+                        <div class="project-tags"><span class="tag">Python</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="container">
+                <h2 class="section-title">🛠️ Technical Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages & Frameworks</h3>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Java/Spring</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data & Big Data</h3>
+                        <div class="tags">
+                            <span class="tag">Apache Spark</span>
+                            <span class="tag">Presto/Trino</span>
+                            <span class="tag">Apache Kafka</span>
+                            <span class="tag">Apache Airflow</span>
+                            <span class="tag">ETL</span>
+                            <span class="tag">dbt</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">Chef</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Databases & Caching</h3>
+                        <div class="tags">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">DynamoDB</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Elasticsearch</span>
+                            <span class="tag">Memcache</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Observability & Monitoring</h3>
+                        <div class="tags">
+                            <span class="tag">NewRelic APM</span>
+                            <span class="tag">Kibana</span>
+                            <span class="tag">Prometheus</span>
+                            <span class="tag">Grafana</span>
+                            <span class="tag">Datadog</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Messaging & Queues</h3>
+                        <div class="tags">
+                            <span class="tag">RabbitMQ</span>
+                            <span class="tag">Apache Kafka</span>
+                            <span class="tag">Celery</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Infrastructure as Code</h3>
+                        <div class="tags">
+                            <span class="tag">Terraform</span>
+                            <span class="tag">Chef</span>
+                            <span class="tag">Ansible</span>
+                            <span class="tag">Jenkins</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Testing & Quality</h3>
+                        <div class="tags">
+                            <span class="tag">PyTest</span>
+                            <span class="tag">JUnit</span>
+                            <span class="tag">Selenium</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>BI & Data Visualization</h3>
+                        <div class="tags">
+                            <span class="tag">Pentaho</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">SQL Reporting</span>
+                            <span class="tag">Tableau Compatible</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2 class="section-title">📬 Get in Touch</h2>
+                
+                <div class="contact-grid">
+                    <a href="mailto:fred.tecnologia@gmail.com" class="contact-card">
+                        <span class="icon">✉️</span>
+                        <h3>Email</h3>
+                        <p>fred.tecnologia@gmail.com</p>
+                    </a>
+
+                    <a href="#" class="contact-card">
+                        <span class="icon">📄</span>
+                        <h3>Resume</h3>
+                        <p>resume.pdf</p>
+                    </a>
+
+                    <a href="https://github.com/fredcamps" class="contact-card">
+                        <span class="icon">🐙</span>
+                        <h3>GitHub</h3>
+                        <p>github.com/fredcamps</p>
+                    </a>
+
+                    <a href="https://linkedin.com/in/fred-p-campos" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <span class="icon">💼</span>
+                        <h3>LinkedIn</h3>
+                        <p>linkedin.com/in/fred-p-campos</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Fred Campos. Built with passion for scalable data infrastructure.</p>
+        </div>
+    </footer>
+</body>
+</html>
