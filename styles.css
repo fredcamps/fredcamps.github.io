@@ -44,6 +44,15 @@ body {
     line-height: 1.6;
 }
 
+a:link {
+    color: var(--green);
+}
+
+a:visited {
+    color: var(--green);
+    font-weight: bold;
+}
+
 /* CRT Screen Effect */
 body::before {
     content: '';
@@ -101,14 +110,14 @@ body::before {
 }
 
 .nav a:hover {
-    background: var(--green);
-    color: var(--bg-primary);
+    background: var(--bg-secondary);
+    color: var(--green);
     text-shadow: 0 0 8px var(--green);
 }
 
 .nav a.active {
-    background: var(--green);
-    color: var(--bg-primary);
+    background: var(--bg-secondary);
+    color: var(--green);
     text-decoration: underline;
 }
 
@@ -163,15 +172,14 @@ body::before {
 }
 
 .btn-primary {
-    background: var(--green);
-    color: var(--bg-primary);
+    background: var(--bg-primary);
     border: 2px solid var(--green);
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
 }
 
 .btn-primary:hover {
-    background: var(--green-accent);
-    color: var(--bg-primary);
+    background: var(--bg-secondary);
+    color: var(--green);
     border-color: var(--green-accent);
     box-shadow: 0 0 25px rgba(255, 255, 0, 0.6);
 }
@@ -183,8 +191,8 @@ body::before {
 }
 
 .btn-secondary:hover {
-    background: var(--grey-accent);
-    color: white;
+    background: var(--bg-secondary);
+    color: var(--green);
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
 }
 
@@ -198,6 +206,36 @@ body::before {
     text-shadow: 0 0 10px rgba(255, 255, 0, 0.4);
     border-bottom: 2px solid var(--green);
     padding-bottom: 0.5rem;
+}
+
+.section-icon {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.35em;
+    vertical-align: -0.12em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.index-icon {
+    color: var(--green);
+}
+
+.project-icon {
+    fill: currentColor;
+}
+
+.project-icon .icon-frame {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+}
+
+.project-icon .icon-cutout {
+    fill: var(--bg-primary);
 }
 
 /* Projects Grid */
@@ -214,15 +252,19 @@ body::before {
 }
 
 .project-card {
+    display: block;
     background: var(--bg-primary);
     border-radius: 4px;
     padding: 2rem;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    color: inherit;
+    text-decoration: none;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-visible {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
     border-color: var(--green);
@@ -235,19 +277,15 @@ body::before {
     margin-bottom: 1.5rem;
 }
 
-.project-header a.github-icon svg {
-    fill: var(--text-primary);
-    transition: fill 0.3s ease;
-}
-
-.project-header a.github-icon:hover svg {
-    fill: var(--green-accent);
+.project-card:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
 }
 
 .project-card h3 {
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--text-primary);
+    color: var(--green);
     margin-bottom: 0.75rem;
 }
 
@@ -290,7 +328,7 @@ body::before {
 
 .skill-category h3 {
     font-size: 1.1rem;
-    color: var(--grey-accent);
+    color: var(--green);
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -309,6 +347,12 @@ body::before {
     background: var(--bg-secondary);
     padding: 4rem 0;
     border-top: 2px dashed var(--green);
+}
+
+.portfolio-page .projects,
+.portfolio-page .skills,
+.portfolio-page .contact {
+    border-top: 0;
 }
 
 .contact-grid {
@@ -341,9 +385,15 @@ body::before {
     margin-bottom: 1rem;
 }
 
+.contact-card .icon svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
 .contact-card h3 {
     font-size: 1.1rem;
-    color: var(--text-primary);
+    color: var(--green);
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
@@ -351,6 +401,13 @@ body::before {
 .contact-card p {
     color: var(--text-secondary);
     font-size: 0.9rem;
+}
+
+.contact-card .email {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    white-space: nowrap;
 }
 
 /* Footer */
@@ -369,10 +426,13 @@ body::before {
 }
 
 /* Work Experience */
+.professional-summary {
+    padding-top: 4rem;
+}
+
 .work-experience {
     background: var(--bg-primary);
     padding: 4rem 0;
-    border-top: 2px dashed var(--grey-accent);
 }
 
 .job-card {
@@ -399,13 +459,13 @@ body::before {
 .job-card h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--green-accent);
+    color: var(--green);
     display: block;
     margin-bottom: 0.25rem;
 }
 
 .company {
-    color: var(--grey-accent);
+    color: var(--text-secondary);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -443,7 +503,6 @@ body::before {
 .project-highlights {
     background: var(--bg-secondary);
     padding: 4rem 0;
-    border-top: 2px dashed var(--grey-accent);
 }
 
 .highlights-grid {
@@ -469,7 +528,7 @@ body::before {
 
 .highlight-card h3 {
     font-size: 1.25rem;
-    color: var(--grey-accent);
+    color: var(--green);
     margin-bottom: 1rem;
 }
 
@@ -479,10 +538,28 @@ body::before {
 }
 
 /* Education */
+.languages {
+    background: var(--bg-secondary);
+    padding: 4rem 0;
+}
+
+.languages-list {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.languages-list li {
+    color: var(--text-secondary);
+}
+
+.languages-list strong {
+    color: var(--text-primary);
+}
+
 .education {
     background: var(--bg-primary);
     padding: 4rem 0;
-    border-top: 2px dashed var(--green);
 }
 
 .education-item {
@@ -495,7 +572,7 @@ body::before {
 
 .education-item h3 {
     font-size: 1.25rem;
-    color: var(--text-primary);
+    color: var(--green);
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
@@ -504,7 +581,12 @@ body::before {
 .certifications {
     background: var(--bg-secondary);
     padding: 4rem 0;
-    border-top: 2px dashed var(--grey-accent);
+    color: var(--green);
+}
+
+.certifications .section-title,
+.certifications .cert-name {
+    color: var(--green);
 }
 
 .cert-item {
@@ -524,17 +606,29 @@ body::before {
 .cert-name {
     font-weight: bold;
     color: var(--text-primary);
+    text-decoration: none;
+}
+
+.cert-icon {
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 0.4em;
+    vertical-align: -0.25em;
+    fill: currentColor;
 }
 
 .cert-issuer {
-    color: var(--grey-accent);
+    color: var(--green);
 }
 
 /* Tools Section */
 .tools-section {
     background: var(--bg-primary);
     padding: 4rem 0;
-    border-top: 2px dashed var(--green);
+}
+
+.tools-section + .contact {
+    border-top: 0;
 }
 
 .tools-grid {
@@ -545,7 +639,7 @@ body::before {
 
 .tools-category h3 {
     font-size: 1.1rem;
-    color: var(--grey-accent);
+    color: var(--green);
     margin-bottom: 1rem;
     font-weight: bold;
 }
