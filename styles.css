@@ -116,7 +116,7 @@ body::before {
 }
 
 .nav a.active {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     color: var(--green);
 }
 
