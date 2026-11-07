@@ -9,7 +9,7 @@ A personal portfolio and resume website for Fred Campos, a Senior Software Engin
 
 ## Technology
 
-The site is built with static HTML and CSS. It uses Google Fonts (Inter and Fira Code) and requires no build step or JavaScript framework.
+The site is built with static HTML and CSS. It uses the VT323 terminal-style font from Google Fonts and requires no build step or JavaScript framework.
 
 ## Run locally
 

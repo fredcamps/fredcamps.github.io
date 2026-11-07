@@ -6,6 +6,7 @@
 }
 
 :root {
+    --font-size-increase: 2px;
     --bg-primary: #000000;
     --bg-secondary: #1a1a1a;
     --bg-tertiary: #3a3a3a;
@@ -38,10 +39,15 @@
 }
 
 body {
-    font-family: 'Fira Code', 'Courier New', monospace;
+    font-family: 'VT323', 'Courier New', monospace;
+    font-size: calc(1rem + var(--font-size-increase));
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
 }
 
 a:link {
@@ -92,7 +98,7 @@ body::before {
 }
 
 .logo code {
-    font-size: 1.5rem;
+    font-size: calc(1.5rem + var(--font-size-increase));
     font-weight: bold;
     color: var(--green-accent);
     letter-spacing: -0.5px;
@@ -109,16 +115,19 @@ body::before {
     letter-spacing: 0.5px;
 }
 
-.nav a:hover {
-    background: var(--bg-secondary);
-    color: var(--green);
-    text-shadow: 0 0 8px var(--green);
-}
-
 .nav a.active {
     background: var(--bg-secondary);
     color: var(--green);
-    text-decoration: underline;
+}
+
+.nav a.inactive {
+    color: var(--green);
+}
+
+.nav a:hover {
+    background: var(--green);
+    color: var(--bg-primary);
+    text-shadow: none;
 }
 
 /* Hero Section */
@@ -130,7 +139,7 @@ body::before {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: calc(clamp(2.5rem, 5vw, 4rem) + var(--font-size-increase));
     font-weight: bold;
     margin-bottom: 1rem;
     color: var(--green-accent);
@@ -139,7 +148,7 @@ body::before {
 }
 
 .hero .subtitle {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-size: calc(clamp(1.25rem, 3vw, 1.75rem) + var(--font-size-increase));
     color: var(--text-primary);
     margin-bottom: 1.5rem;
     font-weight: bold;
@@ -150,7 +159,7 @@ body::before {
     max-width: 700px;
     margin: 0 auto 3rem;
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: calc(1.1rem + var(--font-size-increase));
 }
 
 .hero-actions {
@@ -172,33 +181,36 @@ body::before {
 }
 
 .btn-primary {
-    background: var(--bg-primary);
+    background: var(--green);
     border: 2px solid var(--green);
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
 }
 
-.btn-primary:hover {
-    background: var(--bg-secondary);
-    color: var(--green);
-    border-color: var(--green-accent);
-    box-shadow: 0 0 25px rgba(255, 255, 0, 0.6);
+.btn.btn-primary {
+    color: var(--bg-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.65);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--text-primary);
-    border: 2px solid var(--grey-accent);
+    border: 2px solid var(--green);
 }
 
-.btn-secondary:hover {
-    background: var(--bg-secondary);
-    color: var(--green);
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+.hero-actions a.btn.btn-secondary:hover,
+.hero-actions a.btn.btn-secondary:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.65);
 }
 
 /* Section Title */
 .section-title {
-    font-size: 2.5rem;
+    font-size: calc(2.5rem + var(--font-size-increase));
     font-weight: bold;
     margin-bottom: 3rem;
     color: var(--green-accent);
@@ -283,7 +295,7 @@ body::before {
 }
 
 .project-card h3 {
-    font-size: 1.25rem;
+    font-size: calc(1.25rem + var(--font-size-increase));
     font-weight: bold;
     color: var(--green);
     margin-bottom: 0.75rem;
@@ -291,7 +303,7 @@ body::before {
 
 .project-card .description {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: calc(0.95rem + var(--font-size-increase));
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -305,12 +317,17 @@ body::before {
 .tag {
     display: inline-block;
     padding: 0.375rem 0.75rem;
-    background: var(--bg-tertiary);
+    background: var(--bg-primary);
     color: var(--text-primary);
     border-radius: 4px;
-    font-size: 0.8125rem;
+    font-size: calc(0.8125rem + var(--font-size-increase));
     font-weight: bold;
     border: 1px solid var(--green);
+}
+
+.tag:hover {
+    background: var(--green);
+    color: var(--bg-primary);
 }
 
 /* Skills Section */
@@ -327,13 +344,18 @@ body::before {
 }
 
 .skill-category h3 {
-    font-size: 1.1rem;
+    font-size: calc(1.1rem + var(--font-size-increase));
     color: var(--green);
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     font-weight: bold;
-    text-decoration: underline;
+}
+
+.tags {
+    background: var(--bg-primary);
+    text-align: left;
+    justify-content: flex-start;
 }
 
 .skill-category .tags {
@@ -353,6 +375,10 @@ body::before {
 .portfolio-page .skills,
 .portfolio-page .contact {
     border-top: 0;
+}
+
+.portfolio-page main > section {
+    padding: 4rem 0;
 }
 
 .contact-grid {
@@ -381,7 +407,7 @@ body::before {
 
 .contact-card .icon {
     display: block;
-    font-size: 2.5rem;
+    font-size: calc(2.5rem + var(--font-size-increase));
     margin-bottom: 1rem;
 }
 
@@ -392,7 +418,7 @@ body::before {
 }
 
 .contact-card h3 {
-    font-size: 1.1rem;
+    font-size: calc(1.1rem + var(--font-size-increase));
     color: var(--green);
     margin-bottom: 0.5rem;
     font-weight: bold;
@@ -400,7 +426,13 @@ body::before {
 
 .contact-card p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + var(--font-size-increase));
+}
+
+.contact-card .linkedin-url {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .contact-card .email {
@@ -421,18 +453,18 @@ body::before {
 
 .footer p {
     opacity: 0.8;
-    font-size: 0.9rem;
-    font-family: 'Fira Code', monospace;
+    font-size: calc(0.9rem + var(--font-size-increase));
+    font-family: 'VT323', 'Courier New', monospace;
 }
 
 /* Work Experience */
 .professional-summary {
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 
 .work-experience {
     background: var(--bg-primary);
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .job-card {
@@ -457,7 +489,7 @@ body::before {
 }
 
 .job-card h3 {
-    font-size: 1.5rem;
+    font-size: calc(1.5rem + var(--font-size-increase));
     font-weight: bold;
     color: var(--green);
     display: block;
@@ -467,7 +499,6 @@ body::before {
 .company {
     color: var(--text-secondary);
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .job-details {
@@ -478,7 +509,7 @@ body::before {
 }
 
 .location, .date {
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + var(--font-size-increase));
 }
 
 .responsibilities {
@@ -496,13 +527,13 @@ body::before {
     margin-top: 1.5rem;
     padding-top: 1rem;
     border-top: 2px dashed var(--border-color);
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + var(--font-size-increase));
 }
 
 /* Project Highlights */
 .project-highlights {
     background: var(--bg-secondary);
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .highlights-grid {
@@ -527,7 +558,7 @@ body::before {
 }
 
 .highlight-card h3 {
-    font-size: 1.25rem;
+    font-size: calc(1.25rem + var(--font-size-increase));
     color: var(--green);
     margin-bottom: 1rem;
 }
@@ -540,7 +571,7 @@ body::before {
 /* Education */
 .languages {
     background: var(--bg-secondary);
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .languages-list {
@@ -559,7 +590,7 @@ body::before {
 
 .education {
     background: var(--bg-primary);
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .education-item {
@@ -571,7 +602,7 @@ body::before {
 }
 
 .education-item h3 {
-    font-size: 1.25rem;
+    font-size: calc(1.25rem + var(--font-size-increase));
     color: var(--green);
     margin-bottom: 0.5rem;
     font-weight: bold;
@@ -580,7 +611,7 @@ body::before {
 /* Certifications */
 .certifications {
     background: var(--bg-secondary);
-    padding: 4rem 0;
+    padding: 2rem 0;
     color: var(--green);
 }
 
@@ -624,11 +655,21 @@ body::before {
 /* Tools Section */
 .tools-section {
     background: var(--bg-primary);
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
-.tools-section + .contact {
+.references {
+    background: var(--bg-secondary);
+    padding: 2rem 0;
+}
+
+.tools-section + .contact,
+.references + .contact {
     border-top: 0;
+}
+
+body:not(.portfolio-page) .contact {
+    padding: 2rem 0;
 }
 
 .tools-grid {
@@ -638,17 +679,19 @@ body::before {
 }
 
 .tools-category h3 {
-    font-size: 1.1rem;
+    font-size: calc(1.1rem + var(--font-size-increase));
     color: var(--green);
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .tools-category .tags {
-    background: var(--bg-tertiary);
-    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + var(--font-size-increase));
     color: var(--text-primary);
 }
 
@@ -664,7 +707,7 @@ body::before {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: calc(2rem + var(--font-size-increase));
     }
 
     .hero-actions {
